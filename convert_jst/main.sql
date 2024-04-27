@@ -3,5 +3,5 @@
 -- Output: JST timestamp in string format
 CREATE TEMP FUNCTION convert_jst(input TIMESTAMP)
 AS ((
-  SELECT FORMAT_TIMESTAMP('%Y-%m-%d %H:%M:%S', TIMESTAMP(input), 'Asia/Tokyo')
+  SELECT FORMAT_TIMESTAMP('%Y-%m-%d %H:%M:%S', input, 'Asia/Tokyo')
 ));
